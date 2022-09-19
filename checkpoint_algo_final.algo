@@ -1,0 +1,32 @@
+ALGORITHM read_sentence
+var
+  sentence : CHAR ;
+  sentence_length : INTEGER:=0;
+  num_words : INTEGER:=0;
+  num_vowels : INTEGER:=0;
+ 
+
+BEGIN
+  Read(sentence)
+  WHILE (sentence <> '.') DO
+    IF (sentence in ['a','e','o','u','i,','A','O','E','U','I']) THEN
+    sentence_length++
+    num_vowels++
+
+    ELSE_IF (sentence = ' ') THEN
+      sentence_length++
+      num_words++
+
+    ELSE
+      sentence_length++
+ 
+
+    END_IF
+  END_WHILE
+
+  Write(sentence_length)
+  Write(num_words)
+  Write(num_vowels)
+END 
+
+
